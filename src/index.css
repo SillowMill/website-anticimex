@@ -5,10 +5,10 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Red Hat Display", sans-serif;
 
-  --color-brand-50: ##e6f4ea;
-  --color-brand-100: ##c2e5cc;
-  --color-brand-500: ##1EAD61;
-  --color-brand-600: ##0072CE;
+  --color-brand-50: #e6f4ea;
+  --color-brand-100: #c2e5cc;
+  --color-brand-500: #1EAD61;
+  --color-brand-600: #178a4d;
 }
 
 @media (prefers-reduced-motion: reduce) {
