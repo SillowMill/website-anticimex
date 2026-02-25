@@ -65,34 +65,34 @@ const CONFIG = {
 
   // Certifications
   certifications: [
-    {"label": "CEPA Gecertificeerd", "icon": "award"},
-    {"label": "ISO 9001 & 14001", "icon": "filecheck"},
-    {"label": "VCA Gecertificeerd", "icon": "leaf"},
+    { "label": "CEPA Gecertificeerd", "icon": "award" },
+    { "label": "ISO 9001 & 14001", "icon": "filecheck" },
+    { "label": "VCA Gecertificeerd", "icon": "leaf" },
   ],
 
   // Services with pricing
   services: [
-    {"title": "Kakkerlakkenbestrijding", "desc": "Professionele kakkerlakkenbestrijding met IPM-aanpak voor een langdurig resultaat.", "price": "Vanaf €129"},
-    {"title": "Muizenbestrijding", "desc": "Effectieve muizenbestrijding met professionele methoden en preventieadvies.", "price": "Vanaf €99"},
-    {"title": "Rattenbestrijding", "desc": "Complete rattenbestrijding inclusief monitoring en proofing van uw pand.", "price": "Vanaf €119"},
-    {"title": "Bedwantsenbestrijding", "desc": "Grondige bedwantsenbestrijding met warmtebehandeling voor 100% effectiviteit.", "price": "Vanaf €199"},
-    {"title": "Houtinsecten & Zwammen", "desc": "Begassing en behandeling van houtinsecten en zwammen voor structurele bescherming.", "price": "Op aanvraag"},
-    {"title": "Wespenbestrijding", "desc": "Veilige verwijdering van wespennesten door gecertificeerde technici.", "price": "Vanaf €95"},
+    { "title": "Kakkerlakkenbestrijding", "desc": "Professionele kakkerlakkenbestrijding met IPM-aanpak voor een langdurig resultaat.", "price": "Vanaf €129" },
+    { "title": "Muizenbestrijding", "desc": "Effectieve muizenbestrijding met professionele methoden en preventieadvies.", "price": "Vanaf €99" },
+    { "title": "Rattenbestrijding", "desc": "Complete rattenbestrijding inclusief monitoring en proofing van uw pand.", "price": "Vanaf €119" },
+    { "title": "Bedwantsenbestrijding", "desc": "Grondige bedwantsenbestrijding met warmtebehandeling voor 100% effectiviteit.", "price": "Vanaf €199" },
+    { "title": "Houtinsecten & Zwammen", "desc": "Begassing en behandeling van houtinsecten en zwammen voor structurele bescherming.", "price": "Op aanvraag" },
+    { "title": "Wespenbestrijding", "desc": "Veilige verwijdering van wespennesten door gecertificeerde technici.", "price": "Vanaf €95" },
   ],
 
   // Testimonials
   testimonials: [
-    {"name": "Marc D.", "location": "Brussel", "text": "Anticimex heeft ons bedrijfspand volledig vrij gemaakt van kakkerlakken. Professionele aanpak met duidelijke rapportage."},
-    {"name": "Sophie V.", "location": "Leuven", "text": "Na jaren problemen met muizen heeft Anticimex een structurele oplossing geboden. Uitstekende preventieadviezen."},
-    {"name": "Peter K.", "location": "Antwerpen", "text": "De IPM-aanpak van Anticimex is echt top. Milieuvriendelijk en effectief. Aanrader voor bedrijven!"},
+    { "name": "Marc D.", "location": "Brussel", "text": "Anticimex heeft ons bedrijfspand volledig vrij gemaakt van kakkerlakken. Professionele aanpak met duidelijke rapportage." },
+    { "name": "Sophie V.", "location": "Leuven", "text": "Na jaren problemen met muizen heeft Anticimex een structurele oplossing geboden. Uitstekende preventieadviezen." },
+    { "name": "Peter K.", "location": "Antwerpen", "text": "De IPM-aanpak van Anticimex is echt top. Milieuvriendelijk en effectief. Aanrader voor bedrijven!" },
   ],
 
   // Service regions
   regions: [
-    {"region": "Brussel", "cities": ['Brussel', 'Schaarbeek', 'Anderlecht', 'Molenbeek', 'Ukkel', 'Elsene', 'Etterbeek', 'Evere', 'Jette', 'Vorst']},
-    {"region": "Vlaams-Brabant", "cities": ['Leuven', 'Vilvoorde', 'Halle', 'Zaventem', 'Dilbeek', 'Grimbergen', 'Asse', 'Tervuren']},
-    {"region": "Antwerpen", "cities": ['Antwerpen', 'Mechelen', 'Turnhout', 'Lier', 'Herentals', 'Boom']},
-    {"region": "Oost-Vlaanderen", "cities": ['Gent', 'Aalst', 'Sint-Niklaas', 'Dendermonde']},
+    { "region": "Brussel", "cities": ['Brussel', 'Schaarbeek', 'Anderlecht', 'Molenbeek', 'Ukkel', 'Elsene', 'Etterbeek', 'Evere', 'Jette', 'Vorst'] },
+    { "region": "Vlaams-Brabant", "cities": ['Leuven', 'Vilvoorde', 'Halle', 'Zaventem', 'Dilbeek', 'Grimbergen', 'Asse', 'Tervuren'] },
+    { "region": "Antwerpen", "cities": ['Antwerpen', 'Mechelen', 'Turnhout', 'Lier', 'Herentals', 'Boom'] },
+    { "region": "Oost-Vlaanderen", "cities": ['Gent', 'Aalst', 'Sint-Niklaas', 'Dendermonde'] },
   ],
 
   // Social links
@@ -209,7 +209,8 @@ const Hero = () => {
           alt="Professionele ongediertebestrijder aan het werk in beschermende kleding"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-brand-600/60" />
+        {/* Brand gradient overlay — 70-85% opacity for consistent readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-600/90 via-brand-600/80 to-brand-500/70" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-24">
@@ -218,7 +219,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-brand-500/20 border border-brand-500/40 text-brand-50 px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-4 py-2 rounded-full mb-6 backdrop-blur-sm"
           >
             <Clock size={16} />
             <span className="font-display font-semibold text-sm">Interventie binnen 24 uur — 7 dagen per week</span>
@@ -235,7 +236,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-brand-50 text-lg md:text-xl mb-10 leading-relaxed"
+            className="text-white text-lg md:text-xl mb-10 leading-relaxed"
           >
             Heeft u last van ongewenste dieren en insecten? Bij {CONFIG.name} zijn we gespecialiseerd in wering en bestrijding van ongedierte over {CONFIG.region}. Snel, discreet en met garantie.
           </motion.p>
